@@ -10,6 +10,12 @@ class BoundaryConditionHandler():
 
         self.bc_dict = self._setup_boundary_conditions()
 
+    def get_boundaries(self, idnt):
+        try:
+            return self.bc_dict[idnt]
+        except:
+            raise KeyError('At get boundaries: wrong identifier')
+    
     def _setup_boundary_conditions(self):
         bc_u = self._setup_bc('u')
         bc_v = self._setup_bc('v')

@@ -1,5 +1,5 @@
 from boundary_condition import bc_handler
-#from initial_condition import ic_handler
+from initial_condition import ic_handler
 from simulator import swe_sim
 from swe_config import config
 
@@ -20,7 +20,8 @@ class SimulationHandler():
         self.phys_params = self.config.get_physical_setup()
         
 
-        #self.initial = ic_handler.InitialConditionHandler(self.config.get_initial_setup())
+        self.initial = ic_handler.InitialConditionHandler(self.config.get_initial_setup(),
+                                                          self.dimensions)
         self.boundary = bc_handler.BoundaryConditionHandler(self.config.get_boundary_setup())
 
 SimulationHandler('./swe/swe_config/config.json')
