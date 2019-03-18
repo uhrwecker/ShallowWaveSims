@@ -1,0 +1,59 @@
+{
+    "boundary_condition": {
+        "h": [
+            {
+                "OuterBoxBoundary": {
+                    "identifier": "h",
+                    "level": 0,
+                    "start": [0, 0],
+                    "end": [10, 10]
+                }
+            }
+        ],
+        "u": [
+            {
+                "NoneCondition": {
+                     "identifier": "u"
+                }
+            }
+        ],
+        "v": [
+            {
+                "NoneCondition": {
+                     "identifier": "u"
+                }
+            }
+        ]
+    },
+    "initial_condition": {
+        "H": {
+            "BasicStartingSurface": {
+                "height": -1
+            }
+        },
+        "h": {
+            "BasicStartingHeight": {
+                "height": 0.1
+            }
+        },
+        "u": {
+            "AllOnes": {}
+        },
+        "v": {
+            "AllOnes": {}
+        }
+    },
+    "physical_parameters": {
+        "b": 0.1,
+        "g": 10,
+        "nu": 1
+    },
+    "simulation_parameters": {
+        "dt": 0.1,
+        "dx": 1,
+        "dy": 1,
+        "nx": 10,
+        "ny": 10,
+        "steps": 100
+    }
+}

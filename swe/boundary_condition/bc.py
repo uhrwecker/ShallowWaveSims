@@ -15,6 +15,16 @@ class BoundaryCondition():
         '''
         raise NotImplementedError
 
+class NoneCondition(BoundaryCondition):
+    '''
+    Defines a none-existing boundary
+    '''
+    def __init__(self, identifier='u'):
+        super().__init__(identifier)
+
+    def apply(self, array):
+        return array
+
 class WallCondition(BoundaryCondition):
     '''
     Will define a wall of given length where all
