@@ -12,15 +12,21 @@
         ],
         "u": [
             {
-                "NoneCondition": {
-                     "identifier": "u"
+                "OuterBoxBoundary": {
+                    "identifier": "u",
+                    "level": 0,
+                    "start": [0, 0],
+                    "end": [10, 10]
                 }
             }
         ],
         "v": [
             {
-                "NoneCondition": {
-                     "identifier": "u"
+                "OuterBoxBoundary": {
+                    "identifier": "h",
+                    "level": 0,
+                    "start": [0, 0],
+                    "end": [10, 10]
                 }
             }
         ]
@@ -28,7 +34,7 @@
     "initial_condition": {
         "H": {
             "BasicStartingSurface": {
-                "height": -1
+                "height": 1
             }
         },
         "h": {
@@ -37,7 +43,7 @@
             }
         },
         "u": {
-            "AllOnes": {}
+            "AllZeros": {}
         },
         "v": {
             "AllOnes": {}
@@ -46,14 +52,14 @@
     "physical_parameters": {
         "b": 0.1,
         "g": 10,
-        "nu": 1
+        "nu": 0.001
     },
     "simulation_parameters": {
-        "dt": 0.1,
+        "dt": 0.005,
         "dx": 1,
         "dy": 1,
         "nx": 10,
         "ny": 10,
-        "steps": 100
+        "steps": 1800
     }
 }

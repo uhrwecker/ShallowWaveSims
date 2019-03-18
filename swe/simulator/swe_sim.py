@@ -1,4 +1,4 @@
-import simulator.numeric_handler as nh
+import swe.simulator.numeric_handler as nh
 import numpy as np
 
 class ShallowWaveSimulator(nh.GeneralNumericHandler):

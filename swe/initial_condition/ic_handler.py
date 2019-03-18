@@ -1,4 +1,4 @@
-from initial_condition import ic
+from swe.initial_condition import ic
 
 class InitialConditionHandler():
     '''

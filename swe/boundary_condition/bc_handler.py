@@ -1,4 +1,4 @@
-from boundary_condition import bc
+from swe.boundary_condition import bc
 
 class BoundaryConditionHandler():
     '''

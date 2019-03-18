@@ -70,8 +70,8 @@ class BasicStartingSurface(InitialCondition):
     def _setup_array(self):
         H = np.zeros(shape=(self.nx, self.ny))
         H[:, :] = self.height
-        H[:2, :] = self.height/2
-        H[-2:, :] = self.height/2
+        #H[:2, :] = self.height/2
+        #H[-2:, :] = self.height/2
         return H
 
 def main():
